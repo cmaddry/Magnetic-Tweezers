@@ -39,6 +39,6 @@ This folder contains some older test scripts and data analysis scripts. I also w
 
 
 ### [Data Analysis Scripts](dataAnalysisScripts)
-This is the main way that I look at data. I created the [calibration](dataAnalysisScripts/calibration) Python package. This is then used in the analysis notebooks which are just named of what data folder they are looking at. This package isn't the most robust (limited edge case testing), but I will hopefully be changing this in the future. Now that I have good data, it should be a lot easier to do this. I also 
+This is the main way that I look at data. I created the [calibration](dataAnalysisScripts/calibration) Python package. This is then used in the analysis notebooks which are just named of what data folder they are looking at. This package isn't the most robust (limited edge case testing), but I will hopefully be changing this in the future. Now that I have good data, it should be a lot easier to do this.
 
- 
+To calculate forces, I use [tweezepy](https://github.com/ianlmorgan/tweezepy). It is a really nice Python package that can calculate the force using Allen Variance or the Power Spectral Density. It works really well and I haven't had any real problems while using it. I still calculate the force using the simple equipartition theorem in some of these scripts.
