@@ -35,10 +35,10 @@ This contains most of the good data that I have been looking at. The structure i
 The subfolders then have names associated to the assay conditions (whether or not BSA was used, what kind of beads were used, etc.). I will be adding some textfiles in each directory to explain what the conditions were more thoroughly. The text files containing the actual data are then in teh subfolders. 
 
 ### [Scripts](Scripts )
-This folder contains some older test scripts and data analysis scripts. I also worked on building a more robust Python package in here. That code is [here]("Scripts/Caleb/AutoScriptTestModular.ipynb"). I then later moved it to the next [section](/dataAnalysisScripts/calibration) in a more robust package and analysis workflow. I mainly just keep this folder around so that I can look at old data and use parts of the code in here for reference. 
+This folder contains some older test scripts and data analysis scripts. I also worked on building a more robust Python package in here. That code is [here](Scripts/Caleb/AutoScriptTestModular.ipynb). I then later moved it to the next [section](dataAnalysisScripts/calibration) in a more robust package and analysis workflow. I mainly just keep this folder around so that I can look at old data and use parts of the code in here for reference. 
 
 
 ### [Data Analysis Scripts](dataAnalysisScripts)
-This is the main way that I look at data. I created the [calibration](dataAnalysisScripts/calibration) Python package. This is then used in the analysis notebooks which are just named of what data folder they are looking at. This package isn't the most robust (limited edge case testing), but I will hopefully be changing this in the future. Now that I have good data, it should be a lot easier to do this. 
+This is the main way that I look at data. I created the [calibration](dataAnalysisScripts/calibration) Python package. This is then used in the analysis notebooks which are just named of what data folder they are looking at. This package isn't the most robust (limited edge case testing), but I will hopefully be changing this in the future. Now that I have good data, it should be a lot easier to do this. I also 
 
  
