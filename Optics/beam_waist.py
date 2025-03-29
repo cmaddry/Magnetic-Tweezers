@@ -13,6 +13,9 @@ def f(x):
 def func(x, hx0, hw):
     return 0.5*(1+erf((-hx0 + x)*np.sqrt(2)/hw))
 
+# Function for the beam divergence
+def divergence(d1, d2, dist):
+    return np.arctan(0.5*(d2 - d1)/dist)
 
 
 ## Short Distance Low Power
@@ -62,7 +65,7 @@ plt.show()
 
 ## Long Distance Low Power
 x_distance = [0, 0.4, 0.8, 1.0,  1.2, 1.4, 1.6, 1.8, 2.0, 2.2, 2.4, 2.6, 2.8, 3.2, 3.6, 4.0, 4.4, 4.8]
-laser_power = [1.62, 3.15, 8.57, 13.9, 18.7, 25.0, 30.6, 34.3, 36.6, 37.8, 38.3, 38.6, 38.7, 39.0, 39.2, 39.3, 39.9, 39.9]
+laser_power = [1.62, 3.15, 8.57, 13.9, 18.7, 25.0, 30.6, 34.3, 36.6, 37.8, 38.3, 38.6, 38.7, 39.0, 39.2, 39.3, 39.4, 39.4]
 
 # Normalize the vector to the max power
 laser_power_array = np.array(laser_power)/39.9
@@ -101,3 +104,19 @@ plt.plot(-np.array(x_distance) + 6.4, f(np.array(x_distance)), color = "#ff5050"
 plt.title("Long Distance High Power"); plt.xlabel("Distance (mm)"); plt.ylabel("SLED Power (mW)")
 plt.legend()
 plt.show()
+
+
+## Now finding the change in angle of the beam: https://www.gentec-eo.com/laser-calculators/beam-divergence-and-diameter 
+x1 = 14.1 #cm
+x2 = 90.4 #cm
+dist = x2 - x1
+
+# Low power
+d2 = 1.1230
+d1 = 0.5063
+print(f"Low power beam half angle divergence {1000*divergence(d1, d2, dist):.3f} mrads")
+
+# High power
+d2 = 1.0574
+d1 = 0.5011
+print(f"High power beam half angle divergence {1000*divergence(d1, d2, dist):.3f} mrads")
