@@ -27,9 +27,9 @@ laser_power = [0.106, 0.156, 0.217, 0.333, 1.103, 3.69, 15.3, 26.9, 35.0, 39.3, 
 laser_power_array = np.array(laser_power)/40.3
 
 # Fitting the data
-fit, error = curve_fit(func, x_distance, laser_power_array, bounds=(0, [3.6, 2]))
-hx0 = fit[0]
-hw = fit[1]
+parameters, covariance = curve_fit(func, x_distance, laser_power_array, bounds=(0, [3.6, 2]))
+hx0 = parameters[0]
+hw = parameters[1]
 print(f"Beam waist: {hw:.4f} mm")
 
 # Plotting the fit
@@ -49,9 +49,9 @@ laser_power = [0.863, 0.861, 0.855, 0.843, 0.747, 0.575, 0.316, 0.0762, 0.0225, 
 laser_power_array = np.array(laser_power)/0.863
 
 # Fitting the data
-fit, error = curve_fit(func, -np.array(x_distance) + 2.8, laser_power_array, bounds=(0, [3.6, 2]))
-hx0 = fit[0]
-hw = fit[1]
+parameters, covariance = curve_fit(func, -np.array(x_distance) + 2.8, laser_power_array, bounds=(0, [3.6, 2]))
+hx0 = parameters[0]
+hw = parameters[1]
 print(f"Beam waist: {hw:.4f} mm")
 
 # Plotting the fit
@@ -71,9 +71,9 @@ laser_power = [1.62, 3.15, 8.57, 13.9, 18.7, 25.0, 30.6, 34.3, 36.6, 37.8, 38.3,
 laser_power_array = np.array(laser_power)/39.9
 
 # Fitting the data
-fit, error = curve_fit(func, x_distance, laser_power_array, bounds=(0, [3.6, 2]))
-hx0 = fit[0]
-hw = fit[1]
+parameters, covariance = curve_fit(func, x_distance, laser_power_array, bounds=(0, [3.6, 2]))
+hx0 = parameters[0]
+hw = parameters[1]
 print(f"Beam waist: {hw:.4f} mm")
 
 # Plotting the fit
@@ -93,9 +93,9 @@ laser_power = [0.854, 0.854, 0.853, 0.853, 0.852, 0.851, 0.850, 0.847, 0.843, 0.
 laser_power_array = np.array(laser_power)/0.854
 
 # Fitting the data
-fit, error = curve_fit(func, -np.array(x_distance) + 6.4, laser_power_array, bounds=(0, [3.6, 2]))
-hx0 = fit[0]
-hw = fit[1]
+parameters, covariance  = curve_fit(func, -np.array(x_distance) + 6.4, laser_power_array, bounds=(0, [3.6, 2]))
+hx0 = parameters[0]
+hw = parameters[1]
 print(f"Beam waist: {hw:.4f} mm")
 
 # Plotting the fit
