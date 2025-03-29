@@ -27,6 +27,7 @@ laser_power_array = np.array(laser_power)/40.3
 fit, error = curve_fit(func, x_distance, laser_power_array, bounds=(0, [3.6, 2]))
 hx0 = fit[0]
 hw = fit[1]
+print(f"Beam waist: {hw:.4f} mm")
 
 # Plotting the fit
 plt.scatter(x_distance, laser_power_array, color = "#009900", zorder = 1)
@@ -48,6 +49,7 @@ laser_power_array = np.array(laser_power)/0.863
 fit, error = curve_fit(func, -np.array(x_distance) + 2.8, laser_power_array, bounds=(0, [3.6, 2]))
 hx0 = fit[0]
 hw = fit[1]
+print(f"Beam waist: {hw:.4f} mm")
 
 # Plotting the fit
 plt.scatter(np.array(x_distance), laser_power_array, color = "#009900", zorder = 1)
@@ -69,6 +71,7 @@ laser_power_array = np.array(laser_power)/39.9
 fit, error = curve_fit(func, x_distance, laser_power_array, bounds=(0, [3.6, 2]))
 hx0 = fit[0]
 hw = fit[1]
+print(f"Beam waist: {hw:.4f} mm")
 
 # Plotting the fit
 plt.scatter(x_distance, laser_power_array, color = "#009900", zorder = 1)
@@ -90,6 +93,7 @@ laser_power_array = np.array(laser_power)/0.854
 fit, error = curve_fit(func, -np.array(x_distance) + 6.4, laser_power_array, bounds=(0, [3.6, 2]))
 hx0 = fit[0]
 hw = fit[1]
+print(f"Beam waist: {hw:.4f} mm")
 
 # Plotting the fit
 plt.scatter(x_distance, laser_power_array, color = "#009900", zorder = 1)
