@@ -31,7 +31,7 @@ hw = fit[1]
 # Plotting the fit
 plt.scatter(x_distance, laser_power_array, color = "#009900", zorder = 1)
 plt.plot(x_distance, f(np.array(x_distance)), color = "#ff5050", label=f"Fit with width = {hw:.2f} and hx0 = {hx0:.2f}", zorder = 0)
-plt.title("Short Distance Low Power"); plt.xlabel("Distance (um)"); plt.ylabel("SLED Power (uW)")
+plt.title("Short Distance Low Power"); plt.xlabel("Distance (mm)"); plt.ylabel("SLED Power (uW)")
 plt.legend()
 plt.show()
 
@@ -52,7 +52,7 @@ hw = fit[1]
 # Plotting the fit
 plt.scatter(np.array(x_distance), laser_power_array, color = "#009900", zorder = 1)
 plt.plot(-np.array(x_distance) + 2.8, f(np.array(x_distance)), color = "#ff5050", label=f"Fit with width = {hw:.2f} and hx0 = {hx0:.2f}", zorder = 0)
-plt.title("Short Distance High Power"); plt.xlabel("Distance (um)"); plt.ylabel("SLED Power (mW)")
+plt.title("Short Distance High Power"); plt.xlabel("Distance (mm)"); plt.ylabel("SLED Power (mW)")
 plt.legend()
 plt.show()
 
@@ -73,7 +73,7 @@ hw = fit[1]
 # Plotting the fit
 plt.scatter(x_distance, laser_power_array, color = "#009900", zorder = 1)
 plt.plot(x_distance, f(np.array(x_distance)), color = "#ff5050", label=f"Fit with width = {hw:.2f} and hx0 = {hx0:.2f}", zorder = 0)
-plt.title("Long Distance Low Power"); plt.xlabel("Distance (um)"); plt.ylabel("SLED Power (uW)")
+plt.title("Long Distance Low Power"); plt.xlabel("Distance (mm)"); plt.ylabel("SLED Power (uW)")
 plt.legend()
 plt.show()
 
@@ -94,6 +94,6 @@ hw = fit[1]
 # Plotting the fit
 plt.scatter(x_distance, laser_power_array, color = "#009900", zorder = 1)
 plt.plot(-np.array(x_distance) + 6.4, f(np.array(x_distance)), color = "#ff5050", label=f"Fit with width = {hw:.2f} and hx0 = {hx0:.2f}", zorder = 0)
-plt.title("Long Distance High Power"); plt.xlabel("Distance (um)"); plt.ylabel("SLED Power (mW)")
+plt.title("Long Distance High Power"); plt.xlabel("Distance (mm)"); plt.ylabel("SLED Power (mW)")
 plt.legend()
 plt.show()
